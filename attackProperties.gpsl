@@ -1,0 +1,52 @@
+scadaNotAlert = []! |s.sAlert|
+attack_success = [] ! (|s.wtOverflow| and []!|s.sAlert|)
+attack_success1 = [] ! |s.wtOverflow|
+attack_success2 = [] ! |s.wtWaterLevel==0|
+
+overflow_capability0 = [] (! |s.wtOverflow|)
+overflow_capability1 = [] ((! |s.aHasForced|) -> (! |s.wtOverflow|))
+overflow_capability2 = [] ((! |s.aHasManuallyInput|) -> (! |s.wtOverflow|))
+overflow_capability3 = [] ((! |s.aHasJammedNetwork|) -> (! |s.wtOverflow|))
+overflow_capability4 = [] ((! |s.aHasCorruptedSensor|) -> (! |s.wtOverflow|))
+
+overflow_capability12 = [] ((! |s.aHasForced| and ! |s.aHasManuallyInput|) -> (! |s.wtOverflow|))
+overflow_capability13 = [] ((! |s.aHasForced| and ! |s.aHasJammedNetwork|) -> (! |s.wtOverflow|))
+overflow_capability14 = [] ((! |s.aHasForced| and ! |s.aHasCorruptedSensor|) -> (! |s.wtOverflow|))
+overflow_capability23 = [] ((! |s.aHasJammedNetwork| and ! |s.aHasManuallyInput|) -> (! |s.wtOverflow|))
+overflow_capability24 = [] ((! |s.aHasManuallyInput| and ! |s.aHasCorruptedSensor|) -> (! |s.wtOverflow|))
+overflow_capability34 = [] ((! |s.aHasJammedNetwork| and ! |s.aHasCorruptedSensor|) -> (! |s.wtOverflow|))
+
+overflow_capability123 = [] ((! |s.aHasForced| and ! |s.aHasJammedNetwork| and ! |s.aHasManuallyInput|) -> (! |s.wtOverflow|))
+overflow_capability124 = [] ((! |s.aHasForced| and ! |s.aHasManuallyInput| and ! |s.aHasCorruptedSensor|) -> (! |s.wtOverflow|))
+overflow_capability134 = [] ((! |s.aHasForced| and ! |s.aHasJammedNetwork| and ! |s.aHasCorruptedSensor|) -> (! |s.wtOverflow|))
+overflow_capability234 = [] ((! |s.aHasJammedNetwork| and ! |s.aHasManuallyInput| and ! |s.aHasCorruptedSensor|) -> (! |s.wtOverflow|))
+overflow_capability1234 = [] ((! |s.aHasForced| and ! |s.aHasJammedNetwork| and ! |s.aHasManuallyInput| and ! |s.aHasCorruptedSensor|) -> (! |s.wtOverflow|))
+
+
+stealth_capability0 = [] !(|s.wtOverflow| and []!|s.sAlert|)
+stealth_capability0_ = [] (!|s.wtOverflow| or <>|s.sAlert|)
+stealth_capability1 = [] ((! |s.aHasForced|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability1_ = [] ((! |s.aHasForced|) -> ((!|s.wtOverflow| or <>|s.sAlert|)))
+stealth_capability2 = [] ((! |s.aHasManuallyInput|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability2_ = [] ((! |s.aHasManuallyInput|) -> ((!|s.wtOverflow| or <>|s.sAlert|)))
+stealth_capability3 = [] ((! |s.aHasJammedNetwork|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability3_ = [] ((! |s.aHasJammedNetwork|) -> ((!|s.wtOverflow| or <>!|s.sAlert|)))
+stealth_capability4 = [] ((! |s.aHasCorruptedSensor|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability4_ = [] ((! |s.aHasCorruptedSensor|) -> ((!|s.wtOverflow| or <>|s.sAlert|)))
+
+stealth_capability12 = [] ((! |s.aHasForced| and ! |s.aHasManuallyInput|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability13 = [] ((! |s.aHasForced| and ! |s.aHasJammedNetwork|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability14 = [] ((! |s.aHasForced| and ! |s.aHasCorruptedSensor|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability23 = [] ((! |s.aHasJammedNetwork| and ! |s.aHasManuallyInput|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability24 = [] ((! |s.aHasManuallyInput| and ! |s.aHasCorruptedSensor|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability34 = [] ((! |s.aHasJammedNetwork| and ! |s.aHasCorruptedSensor|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+
+stealth_capability123 = [] ((! |s.aHasForced| and ! |s.aHasJammedNetwork| and ! |s.aHasManuallyInput|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability124 = [] ((! |s.aHasForced| and ! |s.aHasManuallyInput| and ! |s.aHasCorruptedSensor|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability134 = [] ((! |s.aHasForced| and ! |s.aHasJammedNetwork| and ! |s.aHasCorruptedSensor|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability234 = [] ((! |s.aHasJammedNetwork| and ! |s.aHasManuallyInput| and ! |s.aHasCorruptedSensor|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability1234 = [] ((! |s.aHasForced| and ! |s.aHasJammedNetwork| and ! |s.aHasManuallyInput| and ! |s.aHasCorruptedSensor|) -> (! (|s.wtOverflow| and []!|s.sAlert|)))
+stealth_capability1234_ = [] ((! |s.aHasForced| and ! |s.aHasJammedNetwork| and ! |s.aHasManuallyInput| and ! |s.aHasCorruptedSensor|) -> ((!|s.wtOverflow| or <>|s.sAlert|)))
+
+
+necessary_attack = [] ((!|s.aHasJammedNetwork| or !|s.aHasForced| or !|s.aHasManuallyInput| or !|s.aHasCorruptedSensor|) ->( !|s.wtOverflow| or |s.sAlert|) )

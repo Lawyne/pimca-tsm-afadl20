@@ -1,0 +1,13 @@
+dependencies {
+    compile group: 'fr.ensta-bretagne', name: 'plug-utils', version: plug.version
+	compile group: 'fr.ensta-bretagne', name: 'plug-runtime-core', version: plug.version
+    
+    //for atomic proposition evaluation
+    compile group:'org.apache.commons', name: 'commons-jexl3', version: '3.1'
+    
+    //for java object marshalling
+    compile group: 'com.esotericsoftware', name: 'kryo', version: '5.0.0-RC4'
+
+    //for TreeItem construction by reflection
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+}
