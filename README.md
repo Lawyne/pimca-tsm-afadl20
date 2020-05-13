@@ -1,8 +1,8 @@
 # pimca-tsm-afadl20
 
 ## Requirements
-Gradle
-[OBP v0.0.8](https://bintray.com/plug-obp/distributions/download_file?file_path=obp2-remote-0.0.8.zip)
+* Gradle
+* [OBP v0.0.8](https://bintray.com/plug-obp/distributions/download_file?file_path=obp2-remote-0.0.8.zip)
 
 ## How to use the model:
 
