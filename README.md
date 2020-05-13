@@ -41,12 +41,16 @@ The model is located at
 ### Example: Sensor
 * In Configuration.java:
 >	//Sensor
+>
 >    public boolean sTriggerSensor = false;
+>
 >    public int sWaterLevel = 10;
+>
 >    public boolean sIsCorrupted = false;
+>
 
 * In ExMain.java
->List<Behavior<Configuration>> sensor() {
+>        List<Behavior<Configuration>> sensor() {
 >
 >        Behavior<Configuration> f2c =
 >                new Behavior<>(
