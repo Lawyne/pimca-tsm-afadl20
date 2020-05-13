@@ -40,14 +40,10 @@ The model is located at
 
 ### Example: Sensor
 * In Configuration.java:
->	//Sensor
->
->    public boolean sTriggerSensor = false;
->
->    public int sWaterLevel = 10;
->
->    public boolean sIsCorrupted = false;
->
+>	      //Sensor
+>       public boolean sTriggerSensor = false;
+>       public int sWaterLevel = 10;
+>       public boolean sIsCorrupted = false;
 
 * In ExMain.java
 >        List<Behavior<Configuration>> sensor() {
@@ -93,7 +89,7 @@ The model is located at
 >                        Channel.in("corruptSensor")
 >                        ,false);
 >        return Arrays.asList(f2c,c2f,c2fa,a2a);
->	}
+>	       }
   
 The sensor contains 4 guarded-commands:
   Name | Guard | Command | Channel | Urgent
