@@ -109,7 +109,7 @@ The sensor contains 4 guarded-commands:
   
 The sensor relays the water level from the water tank to the PLC if it is working properly. Whenever the attacker corrupt the sensor, the sensor no longer relays the water level to the PLC.
 
-## How to check properties
+## How to edit properties
 Within OBP, edit *attackProperties.gpsl* using LTL syntax.
 Property declaration follows this pattern:
 > [name] = [LTL]
