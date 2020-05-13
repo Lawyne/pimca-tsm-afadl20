@@ -26,7 +26,7 @@ The model is located at
 ### How to create a guarded-command:
 >        Behavior<Configuration> *[name]* =
 >                new Behavior<>(
->                         "*[name]*",
+>                        *[name]*,
 >                        *[guard]*,
 >                        *[command]*, 
 >                        *[channel]*,
