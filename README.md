@@ -62,7 +62,7 @@ List<Behavior<Configuration>> sensor() {
                             c.sWaterLevel = c.wtWaterLevel;
                             c.sTriggerSensor = true;
                             return c;
-						                 },  
+			    },  
                         Channel.in("measure")
                         ,false);
         Behavior<Configuration> c2f =
@@ -72,7 +72,7 @@ List<Behavior<Configuration>> sensor() {
                          (c) -> {
                              c.sTriggerSensor = false;                            
                              return c;
- 						                },   
+ 			     },   
                         Channel.out("updateLevel"),
                         true);
         Behavior<Configuration> c2fa =
@@ -82,15 +82,15 @@ List<Behavior<Configuration>> sensor() {
                          (c) -> {
                              c.sTriggerSensor = false;                            
                              return c;
- 						                 },
+ 			     },
                          true);
         Behavior<Configuration> a2a =
                 new Behavior<>(
                          "attacked",
                         (c) -> true,
                         (c) -> {
-                        	    c.sIsCorrupted = true;
-                        	    return c;
+                             c.sIsCorrupted = true;
+                             return c;
                              }, 
                         Channel.in("corruptSensor")
                         ,false);
