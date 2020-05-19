@@ -111,6 +111,7 @@ The sensor relays the water level from the water tank to the PLC if it is workin
 
 ## How to edit properties
 Within OBP, edit *attackProperties.gpsl* using LTL syntax.
+The full description of the GPSL language is available at [www.obpcdl.org](www.obpcdl.org).
 Property declaration follows this pattern:
 > [name] = [LTL]
 * *[name]* is the property name.
