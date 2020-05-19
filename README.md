@@ -51,7 +51,7 @@ The model is located at
        public int sWaterLevel = 10;
        public boolean sIsCorrupted = false;
 ```
-* In ExMain.java
+* In ExMain.java:
 ```        
 List<Behavior<Configuration>> sensor() {
 
